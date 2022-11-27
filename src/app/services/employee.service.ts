@@ -25,4 +25,13 @@ export class EmployeeService {
   getEmpbyId (id : number) : Observable<EmployeeModel> {
     return this.http.get<EmployeeModel>(this.baseUrl+'/'+id);
   }
+
+  editEmployee(obj : EmployeeModel) : Observable<EmployeeModel>{
+    return this.http.put<EmployeeModel> (this.baseUrl,obj);
+  }
+
+  deleteEmployee( id : number) : Observable<EmployeeModel>{
+
+    return this.http.delete<EmployeeModel>(this.baseUrl+'/'+id);
+  }
 }
