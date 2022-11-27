@@ -11,13 +11,6 @@ import { EmployeeService } from 'src/app/services/employee.service';
 export class EditEmployeeComponent implements OnInit {
 
   
-  employe : EmployeeModel ={
-    id : 0,
-    name : '',
-    email : '',
-    salary : 0,
-    department : ''
-  };
   constructor() { }
 
   ngOnInit(): void {
