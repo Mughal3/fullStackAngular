@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,10 +20,11 @@ import { AddEditComponent } from './components/add-edit/add-edit.component';
     AddEmployeeComponent,
     NotFoundComponent,
     EditEmployeeComponent,
-    AddEditComponent
+    AddEditComponent,
+    
   ],
   imports: [
-    BrowserModule,
+     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
