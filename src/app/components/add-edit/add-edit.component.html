@@ -1,0 +1,42 @@
+<form class="example-form" #AddForm ="ngForm" (ngSubmit)="editEmployee()" (ngSubmit)="addEmployee()">
+    
+    <mat-form-field class="example-full-width">
+      <mat-label> ID. </mat-label>
+      <input matInput placeholder="ID" value =" ID " 
+      id="id" name="id" [(ngModel)] = "employ.id"  readonly />
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label> Name </mat-label>
+      <input matInput placeholder="Name" value =" Name " 
+      id="name" name="name" [(ngModel)] = "employ.name" />
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" 
+      id="email" name="email" value="email@example.com" [(ngModel)] = "employ.email" />
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Salary</mat-label>
+      <input type="number" matInput placeholder="Salary" value=" Salary " 
+      id="salary" name="salary" [(ngModel)] = "employ.salary" />
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Department</mat-label>
+      <input matInput placeholder="Department" value=" Department " 
+      id="departmet" name="department" [(ngModel)] = "employ.department" />
+    </mat-form-field>
+  
+    <div *ngIf="employ.id > 0; then edit else add "></div>
+    <ng-template #add>
+      <button mat-raised-button color="primary"  type="submit"> Save </button>
+    </ng-template>
+    <ng-template #edit>
+      <button mat-raised-button color="primary"  type="submit"> UpDate </button>
+      <button mat-raised-button color="warn"  (click)="deleteEmployee()"> Delete </button>
+    </ng-template>
+  </form>
+  

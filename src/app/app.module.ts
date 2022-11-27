@@ -11,6 +11,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
+import { AddEditComponent } from './components/add-edit/add-edit.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditEmployeeComponent } from './components/edit-employee/edit-employee.
     EmployeeListComponent,
     AddEmployeeComponent,
     NotFoundComponent,
-    EditEmployeeComponent
+    EditEmployeeComponent,
+    AddEditComponent
   ],
   imports: [
     BrowserModule,

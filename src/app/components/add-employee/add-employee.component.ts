@@ -17,15 +17,12 @@ export class AddEmployeeComponent implements OnInit {
     salary : 0,
     department : ''
   }; 
-  constructor(private service : EmployeeService , private router : Router) { }
+  constructor() { }
 
   ngOnInit(): void {
     // this.addEmployee();
   }
 
-  addEmployee(){
-    this.service.addEmployee(this.addEmployeeRequest).subscribe( (x : EmployeeModel) => {  this.router.navigate(['employee'])} );
-    console.log(this.addEmployeeRequest);
-  }
+  
 
 }
