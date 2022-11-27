@@ -21,4 +21,8 @@ export class EmployeeService {
 
     return this.http.post<EmployeeModel>(this.baseUrl,emp);
   }
+
+  getEmpbyId (id : number) : Observable<EmployeeModel> {
+    return this.http.get<EmployeeModel>(this.baseUrl+'/'+id);
+  }
 }

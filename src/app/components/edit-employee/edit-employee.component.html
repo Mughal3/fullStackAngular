@@ -1,0 +1,36 @@
+<h2> Edit Employee </h2>
+
+<form class="example-form" #AddForm ="ngForm">
+    
+  <mat-form-field class="example-full-width">
+    <mat-label> ID. </mat-label>
+    <input matInput placeholder="ID" value =" ID " 
+    id="id" name="id" [(ngModel)] = "employe.id"  readonly />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label> Name </mat-label>
+    <input matInput placeholder="Name" value =" Name " 
+    id="name" name="name" [(ngModel)] = "employe.name" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" 
+    id="email" name="email" value="email@example.com" [(ngModel)] = "employe.email" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Salary</mat-label>
+    <input type="number" matInput placeholder="Salary" value=" Salary " 
+    id="salary" name="salary" [(ngModel)] = "employe.salary" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Department</mat-label>
+    <input matInput placeholder="Department" value=" Department " 
+    id="departmet" name="department" [(ngModel)] = "employe.department" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary"  type="submit"> Save </button>
+</form>

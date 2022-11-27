@@ -10,7 +10,7 @@ import { EmployeeService } from 'src/app/services/employee.service';
 export class EmployeeListComponent implements OnInit {
 
   public employeeList : EmployeeModel[] = [];
-  displayedColumns: string[] = ['id', 'name', 'email', 'salary' , 'department'];
+  displayedColumns: string[] = ['id', 'name', 'email', 'salary' , 'department','empty'];
 
   constructor(private service : EmployeeService) { }
 
