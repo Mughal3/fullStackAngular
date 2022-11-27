@@ -1,4 +1,10 @@
 table {
     width: 100%;
-    
   }
+
+  h3 {
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
+    

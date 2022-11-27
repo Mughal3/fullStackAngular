@@ -8,6 +8,8 @@ import { MaterialModule } from './material.module';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [],

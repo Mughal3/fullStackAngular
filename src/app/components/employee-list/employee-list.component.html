@@ -1,4 +1,8 @@
-<table mat-table [dataSource]="employeeList" class="mat-elevation-z8">
+<h2>Employee List</h2>
+<h3> <button mat-raised-button color="primary" routerLink="/Add-employee">Add New Employee</button>  </h3>
+<div *ngIf="employeeList && employeeList.length > 0 ; then table else noTable"></div>
+<ng-template #table>
+  <table mat-table [dataSource]="employeeList" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -36,5 +40,9 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+</ng-template>
+<ng-template #noTable>
+  <p> Employee List is empty </p>
+</ng-template>
   
   

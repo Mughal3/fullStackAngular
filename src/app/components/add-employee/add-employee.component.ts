@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeModel } from 'src/app/models/employee.mode';
+import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
   selector: 'app-add-employee',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEmployeeComponent implements OnInit {
 
-  constructor() { }
+  addEmployeeRequest : EmployeeModel = {
+    id : 0,
+    name : '',
+    email: '',
+    salary : 0,
+    department : ''
+  }; 
+  constructor(private service : EmployeeService) { }
 
   ngOnInit(): void {
+    // this.addEmployee();
+  }
+
+  addEmployee(){
+    this.service.addEmployee(this.addEmployeeRequest).subscribe();
+    console.log(this.addEmployeeRequest);
   }
 
 }

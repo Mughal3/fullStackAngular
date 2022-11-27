@@ -1,1 +1,36 @@
-<p>add-employee works!</p>
+<h2>Add New Employee</h2>
+
+<form class="example-form" #AddForm = "ngForm"  (ngSubmit)="addEmployee()">
+  <mat-form-field class="example-full-width">
+    <mat-label> Name </mat-label>
+    <input matInput placeholder="Name" value =" Name " 
+    id="name" name="name" [(ngModel)] = "addEmployeeRequest.name" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" 
+    id="email" name="email" value="email@example.com" [(ngModel)] = "addEmployeeRequest.email" />
+  </mat-form-field>
+
+  <!-- <mat-form-field class="example-full-width">
+    <mat-label>Telephone</mat-label>
+    <span matPrefix>+92 &nbsp;</span>
+    <input type="tel" matInput placeholder="555-555-1234"  ngModel />
+    <mat-icon matSuffix>mode_edit</mat-icon>
+  </mat-form-field> -->
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Salary</mat-label>
+    <input type="number" matInput placeholder="Salary" value=" Salary " 
+    id="salary" name="salary" [(ngModel)] = "addEmployeeRequest.salary" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Department</mat-label>
+    <input matInput placeholder="Department" value=" Department " 
+    id="departmet" name="department" [(ngModel)] = "addEmployeeRequest.department" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary"  type="submit"> Save </button>
+</form>
